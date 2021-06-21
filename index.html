@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>test only</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" />
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        word-break: keep-all;
+        white-space: nowrap;
+      }
+      tbody tr td {
+        text-align: right;
+      }
+      tbody tr td:first-child {
+        text-align: left;
+      }
+    </style>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" class="init">
+      $(document).ready(function() {
+        $('#seed_table').DataTable( {
+          ajax: 'seed.json',
+          paging: false,
+          info: false,
+          order: [],
+          columns: [
+            {"orderSequence": ["asc", "desc", "none"] },
+            {"orderSequence": ["asc", "desc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["asc", "desc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["desc", "asc"] },
+            {"orderSequence": ["desc", "asc"] }
+          ]
+        } );
+      } );
+    </script>
+  </head>
+  <body>
+    <table id="seed_table" class="display compact" width="100%">
+      <thead>
+        <tr>
+          <th rowspan="2">이름</th>
+          <th rowspan="2">씨앗</th>
+          <th rowspan="2">생산</th>
+          <th rowspan="2">판매</th>
+          <th rowspan="2">이익</th>
+          <th rowspan="2">시간(분)</th>
+          <th colspan="4">최대 1개 파종시 이익(분)</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>10</th>
+          <th>30</th>
+          <th>60</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+</html>
